@@ -1,12 +1,12 @@
 import java.text.DateFormat
 import java.util.Date
 
-val staticTime = settingKey[Date]("Build launch time")
-val formatStyle = settingKey[Int]("Style for formatting date and time")
-val formatter = settingKey[DateFormat]("Date Formatter")
-val dynamicTime = taskKey[Date]("Generates a Date for the current time")
-val formatTime = taskKey[String]("Formats the current time")
-val printTime = taskKey[Unit]("Prints the current time")
+lazy val staticTime = settingKey[Date]("Build launch time")
+lazy val formatStyle = settingKey[Int]("Style for formatting date and time")
+lazy val formatter = settingKey[DateFormat]("Date Formatter")
+lazy val dynamicTime = taskKey[Date]("Generates a Date for the current time")
+lazy val formatTime = taskKey[String]("Formats the current time")
+lazy val printTime = taskKey[Unit]("Prints the current time")
 
 staticTime := new Date
 
